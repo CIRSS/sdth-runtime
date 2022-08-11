@@ -1,0 +1,6 @@
+{
+  "sdtlPath" : "compute_sdtl.json",
+  "ddiPath" : "compute_ddi.xml",
+  "programFileNames" : ["temps.csv","df.csv"],
+  "outputPath" : "products/sdth_output.ttl"
+}

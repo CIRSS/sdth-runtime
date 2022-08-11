@@ -1,0 +1,49 @@
+@ prefix run: <http://c2metadata.org/run/D41D8CD98F00B204E9800998ECF8427E/>.
+@ prefix sdth: <http://c2metadata.org/sdth#>.
+run:ProgramStep1 a sdth:ProgramStep.
+run:ProgramStep1 sdth:hasSDTL "{\"$type\":\"Load\",\"unknownProperties\":[],\"command\":\"Load\",\"sourceInformation\":[{\"lineNumberStart\":1,\"lineNumberEnd\":1,\"sourceStartIndex\":1,\"sourceStopIndex\":32,\"originalSourceText\":\"temps = pd.read_csv('temps.csv')\",\"processedSourceText\":null}],\"messageText\":null,\"producesDataframe\":[{\"dataframeName\":\"temps\",\"variableInventory\":[\"Fahrenheit\"],\"rowDimensions\":[],\"columnDimensions\":[]}],\"consumesDataframe\":null,\"fileName\":\"temps.csv\",\"software\":null,\"fileFormat\":\"csv\",\"isCompressed\":false,\"$type\":\"Load\"}".
+run:ProgramStep1 sdth:hasSourceCode "temps = pd.read_csv('temps.csv')".
+run:ProgramStep1 sdth:loadsFile run:File2.
+run:ProgramStep1 sdth:producesDataframe run:Dataframe1.
+run:ProgramStep1 sdth:assignsVariable run:V1.
+run:ProgramStep3 a sdth:ProgramStep.
+run:ProgramStep3 sdth:hasSDTL "{\"$type\":\"Compute\",\"unknownProperties\":[],\"command\":\"Compute\",\"sourceInformation\":[{\"lineNumberStart\":3,\"lineNumberEnd\":3,\"sourceStartIndex\":35,\"sourceStopIndex\":97,\"originalSourceText\":\"temps = temps.assign(Celsius=((temps.Fahrenheit - 32) * 5 \/ 9))\",\"processedSourceText\":null}],\"messageText\":null,\"producesDataframe\":[{\"dataframeName\":\"temps\",\"variableInventory\":[\"Fahrenheit\",\"Celsius\"],\"rowDimensions\":[],\"columnDimensions\":[]}],\"consumesDataframe\":[{\"dataframeName\":\"temps\",\"variableInventory\":[\"Fahrenheit\"],\"rowDimensions\":[],\"columnDimensions\":[]}],\"variable\":{\"$type\":\"VariableSymbolExpression\",\"name\":null,\"typeName\":null,\"unknownProperties\":[],\"variableName\":\"Celsius\"},\"expression\":{\"$type\":\"FunctionCallExpression\",\"name\":null,\"typeName\":null,\"unknownProperties\":[],\"function\":\"division\",\"arguments\":[{\"$type\":\"FunctionArgument\",\"name\":null,\"typeName\":null,\"unknownProperties\":[],\"argumentName\":\"EXP1\",\"argumentValue\":{\"$type\":\"FunctionCallExpression\",\"name\":null,\"typeName\":null,\"unknownProperties\":[],\"function\":\"multiplication\",\"arguments\":[{\"$type\":\"FunctionArgument\",\"name\":null,\"typeName\":null,\"unknownProperties\":[],\"argumentName\":\"EXP1\",\"argumentValue\":{\"$type\":\"FunctionCallExpression\",\"name\":null,\"typeName\":null,\"unknownProperties\":[],\"function\":\"subtraction\",\"arguments\":[{\"$type\":\"FunctionArgument\",\"name\":null,\"typeName\":null,\"unknownProperties\":[],\"argumentName\":\"EXP1\",\"argumentValue\":{\"$type\":\"VariableSymbolExpression\",\"name\":null,\"typeName\":null,\"unknownProperties\":[],\"variableName\":\"Fahrenheit\"}},{\"$type\":\"FunctionArgument\",\"name\":null,\"typeName\":null,\"unknownProperties\":[],\"argumentName\":\"EXP2\",\"argumentValue\":{\"$type\":\"NumericConstantExpression\",\"name\":null,\"typeName\":null,\"unknownProperties\":[],\"value\":\"32\",\"numericType\":\"Integer\"}}],\"isSdtlName\":true}},{\"$type\":\"FunctionArgument\",\"name\":null,\"typeName\":null,\"unknownProperties\":[],\"argumentName\":\"EXP2\",\"argumentValue\":{\"$type\":\"NumericConstantExpression\",\"name\":null,\"typeName\":null,\"unknownProperties\":[],\"value\":\"5\",\"numericType\":\"Integer\"}}],\"isSdtlName\":true}},{\"$type\":\"FunctionArgument\",\"name\":null,\"typeName\":null,\"unknownProperties\":[],\"argumentName\":\"EXP2\",\"argumentValue\":{\"$type\":\"NumericConstantExpression\",\"name\":null,\"typeName\":null,\"unknownProperties\":[],\"value\":\"9\",\"numericType\":\"Integer\"}}],\"isSdtlName\":true},\"$type\":\"Compute\"}".
+run:ProgramStep3 sdth:hasSourceCode "temps = temps.assign(Celsius=((temps.Fahrenheit - 32) * 5 \/ 9))".
+run:ProgramStep3 sdth:consumesDataframe run:Dataframe1.
+run:ProgramStep3 sdth:producesDataframe run:Dataframe2.
+run:ProgramStep3 sdth:usesVariable run:V1.
+run:ProgramStep3 sdth:assignsVariable run:Variable1.
+run:ProgramStep5 a sdth:ProgramStep.
+run:ProgramStep5 sdth:hasSDTL "{\"$type\":\"Compute\",\"unknownProperties\":[],\"command\":\"Compute\",\"sourceInformation\":[{\"lineNumberStart\":4,\"lineNumberEnd\":4,\"sourceStartIndex\":99,\"sourceStopIndex\":148,\"originalSourceText\":\"temps = temps.assign(Kelvin=(temps.Celsius + 273))\",\"processedSourceText\":null}],\"messageText\":null,\"producesDataframe\":[{\"dataframeName\":\"temps\",\"variableInventory\":[\"Fahrenheit\",\"Celsius\",\"Kelvin\"],\"rowDimensions\":[],\"columnDimensions\":[]}],\"consumesDataframe\":[{\"dataframeName\":\"temps\",\"variableInventory\":[\"Fahrenheit\",\"Celsius\"],\"rowDimensions\":[],\"columnDimensions\":[]}],\"variable\":{\"$type\":\"VariableSymbolExpression\",\"name\":null,\"typeName\":null,\"unknownProperties\":[],\"variableName\":\"Kelvin\"},\"expression\":{\"$type\":\"FunctionCallExpression\",\"name\":null,\"typeName\":null,\"unknownProperties\":[],\"function\":\"addition\",\"arguments\":[{\"$type\":\"FunctionArgument\",\"name\":null,\"typeName\":null,\"unknownProperties\":[],\"argumentName\":\"EXP1\",\"argumentValue\":{\"$type\":\"VariableSymbolExpression\",\"name\":null,\"typeName\":null,\"unknownProperties\":[],\"variableName\":\"Celsius\"}},{\"$type\":\"FunctionArgument\",\"name\":null,\"typeName\":null,\"unknownProperties\":[],\"argumentName\":\"EXP2\",\"argumentValue\":{\"$type\":\"NumericConstantExpression\",\"name\":null,\"typeName\":null,\"unknownProperties\":[],\"value\":\"273\",\"numericType\":\"Integer\"}}],\"isSdtlName\":true},\"$type\":\"Compute\"}".
+run:ProgramStep5 sdth:hasSourceCode "temps = temps.assign(Kelvin=(temps.Celsius + 273))".
+run:ProgramStep5 sdth:consumesDataframe run:Dataframe2.
+run:ProgramStep5 sdth:producesDataframe run:Dataframe3.
+run:ProgramStep5 sdth:usesVariable run:Variable1.
+run:ProgramStep5 sdth:assignsVariable run:Variable2.
+run:ProgramStep6 a sdth:ProgramStep.
+run:ProgramStep6 sdth:hasSDTL "{\"$type\":\"Save\",\"unknownProperties\":[],\"command\":\"Save\",\"sourceInformation\":[{\"lineNumberStart\":6,\"lineNumberEnd\":6,\"sourceStartIndex\":151,\"sourceStopIndex\":198,\"originalSourceText\":\"df.to_csv('outputs\/df_updated.csv', index=False)\",\"processedSourceText\":null}],\"messageText\":null,\"producesDataframe\":null,\"consumesDataframe\":[{\"dataframeName\":\"temps\",\"variableInventory\":[\"Fahrenheit\",\"Celsius\",\"Kelvin\"],\"rowDimensions\":[],\"columnDimensions\":[]}],\"fileName\":\"outputs\/df_updated.csv\",\"software\":null,\"fileFormat\":null,\"isCompressed\":false,\"$type\":\"Save\"}".
+run:ProgramStep6 sdth:hasSourceCode "df.to_csv('outputs\/df_updated.csv', index=False)".
+run:ProgramStep6 sdth:savesFile run:File3.
+run:ProgramStep6 sdth:consumesDataframe run:Dataframe3.
+run:ProgramStep6 sdth:usesVariable run:V1.
+run:ProgramStep6 sdth:usesVariable run:Variable1.
+run:ProgramStep6 sdth:usesVariable run:Variable2.
+run:File2 a sdth:File.
+run:File2 sdth:hasName "temps.csv".
+run:File3 a sdth:File.
+run:File3 sdth:hasName "outputs/df_updated.csv".
+run:Dataframe1 a sdth:Dataframe.
+run:Dataframe1 sdth:includesVariable run:V1.
+run:Dataframe2 a sdth:Dataframe.
+run:Dataframe2 sdth:includesVariable run:V1.
+run:Dataframe2 sdth:includesVariable run:Variable1.
+run:Dataframe3 a sdth:Dataframe.
+run:Dataframe3 sdth:includesVariable run:V1.
+run:Dataframe3 sdth:includesVariable run:Variable1.
+run:Dataframe3 sdth:includesVariable run:Variable2.
+run:V1 a sdth:Variable.
+run:V1 sdth:hasName "Fahrenheit".
+run:Variable1 a sdth:Variable.
+run:Variable1 sdth:hasName "Celsius".
+run:Variable2 a sdth:Variable.
+run:Variable2 sdth:hasName "Kelvin".

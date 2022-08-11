@@ -1,0 +1,209 @@
+{
+    "commands": [
+        {
+            "$type": "Load",
+            "command": "Load",
+            "sourceInformation": [
+                {
+                    "lineNumberStart": 1,
+                    "lineNumberEnd": 1,
+                    "sourceStartIndex": 1,
+                    "sourceStopIndex": 32,
+                    "originalSourceText": "temps = pd.read_csv('temps.csv')"
+                }
+            ],
+            "producesDataframe": [
+                {
+                    "dataframeName": "temps",
+                    "variableInventory": [
+                        "Fahrenheit"
+                    ]
+                }
+            ],
+            "fileName": "temps.csv",
+            "fileFormat": "csv"
+        },
+        {
+            "$type": "Compute",
+            "command": "Compute",
+            "sourceInformation": [
+                {
+                    "lineNumberStart": 3,
+                    "lineNumberEnd": 3,
+                    "sourceStartIndex": 35,
+                    "sourceStopIndex": 97,
+                    "originalSourceText": "temps = temps.assign(Celsius=((temps.Fahrenheit - 32) * 5 / 9))"
+                }
+            ],
+            "consumesDataframe": [
+                {
+                    "dataframeName": "temps",
+                    "variableInventory": [
+                        "Fahrenheit"
+                    ]
+                }
+            ],
+            "producesDataframe": [
+                {
+                    "dataframeName": "temps",
+                    "variableInventory": [
+                        "Fahrenheit",
+                        "Celsius"
+                    ]
+                }
+            ],
+            "variable": {
+                "$type": "VariableSymbolExpression",
+                "variableName": "Celsius"
+            },
+            "expression": {
+                "$type": "FunctionCallExpression",
+                "function": "division",
+                "isSdtlName": true,
+                "arguments": [
+                    {
+                        "$type": "FunctionArgument",
+                        "argumentName": "EXP1",
+                        "argumentValue": {
+                            "$type": "FunctionCallExpression",
+                            "function": "multiplication",
+                            "isSdtlName": true,
+                            "arguments": [
+                                {
+                                    "$type": "FunctionArgument",
+                                    "argumentName": "EXP1",
+                                    "argumentValue": {
+                                        "$type": "FunctionCallExpression",
+                                        "function": "subtraction",
+                                        "isSdtlName": true,
+                                        "arguments": [
+                                            {
+                                                "$type": "FunctionArgument",
+                                                "argumentName": "EXP1",
+                                                "argumentValue": {
+                                                    "$type": "VariableSymbolExpression",
+                                                    "variableName": "Fahrenheit"
+                                                }
+                                            },
+                                            {
+                                                "$type": "FunctionArgument",
+                                                "argumentName": "EXP2",
+                                                "argumentValue": {
+                                                    "$type": "NumericConstantExpression",
+                                                    "value": "32",
+                                                    "numericType": "Integer"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "$type": "FunctionArgument",
+                                    "argumentName": "EXP2",
+                                    "argumentValue": {
+                                        "$type": "NumericConstantExpression",
+                                        "value": "5",
+                                        "numericType": "Integer"
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "$type": "FunctionArgument",
+                        "argumentName": "EXP2",
+                        "argumentValue": {
+                            "$type": "NumericConstantExpression",
+                            "value": "9",
+                            "numericType": "Integer"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "$type": "Compute",
+            "command": "Compute",
+            "sourceInformation": [
+                {
+                    "lineNumberStart": 4,
+                    "lineNumberEnd": 4,
+                    "sourceStartIndex": 99,
+                    "sourceStopIndex": 148,
+                    "originalSourceText": "temps = temps.assign(Kelvin=(temps.Celsius + 273))"
+                }
+            ],
+            "consumesDataframe": [
+                {
+                    "dataframeName": "temps",
+                    "variableInventory": [
+                        "Fahrenheit",
+                        "Celsius"
+                    ]
+                }
+            ],
+            "producesDataframe": [
+                {
+                    "dataframeName": "temps",
+                    "variableInventory": [
+                        "Fahrenheit",
+                        "Celsius",
+                        "Kelvin"
+                    ]
+                }
+            ],
+            "variable": {
+                "$type": "VariableSymbolExpression",
+                "variableName": "Kelvin"
+            },
+            "expression": {
+                "$type": "FunctionCallExpression",
+                "function": "addition",
+                "isSdtlName": true,
+                "arguments": [
+                    {
+                        "$type": "FunctionArgument",
+                        "argumentName": "EXP1",
+                        "argumentValue": {
+                            "$type": "VariableSymbolExpression",
+                            "variableName": "Celsius"
+                        }
+                    },
+                    {
+                        "$type": "FunctionArgument",
+                        "argumentName": "EXP2",
+                        "argumentValue": {
+                            "$type": "NumericConstantExpression",
+                            "value": "273",
+                            "numericType": "Integer"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "$type": "Save",
+            "command": "Save",
+            "sourceInformation": [
+                {
+                    "lineNumberStart": 6,
+                    "lineNumberEnd": 6,
+                    "sourceStartIndex": 151,
+                    "sourceStopIndex": 198,
+                    "originalSourceText": "df.to_csv('outputs/df_updated.csv', index=False)"
+                }
+            ],
+            "fileName": "outputs/df_updated.csv",
+            "consumesDataframe": [
+                {
+                    "dataframeName": "temps",
+                    "variableInventory": [
+                        "Fahrenheit",
+                        "Celsius",
+                        "Kelvin"
+                    ]
+                }
+            ]
+        }
+    ]
+}
