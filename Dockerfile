@@ -7,6 +7,6 @@ RUN bash /repro/dist/setup
 
 USER repro
 
-RUN repro.require sdth-runtime exports
+RUN repro.require sdth-runtime exports --demos
 
 CMD  /bin/bash -il

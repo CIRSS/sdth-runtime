@@ -8,7 +8,14 @@ I MESG Resetting the 'repro' module
 I MESG Re-initializing trim files for module 'repro'
 I MESG Resetting the 'sdth-runtime' module
 I MESG Re-initializing trim files for module 'sdth-runtime'
+I MESG Copying /home/repro/repro-modules/sdth-runtime-exports/Makefile-demos to the 'sdth-runtime' trim directory (/mnt/sdth-runtime/.sdth-runtime)
 I MESG Resetting the 'java-runtime' module
 I MESG Re-initializing trim files for module 'java-runtime'
+I MESG Resetting the 'shell-notebook' module
+I MESG Re-initializing trim files for module 'shell-notebook'
+I MESG Ensuring other files listed in the 'shell-notebook' module trim manifest are in the module trim directory (/mnt/sdth-runtime/.shell-notebook)
+I MESG Copying trim file Makefile.demo-runner from /home/repro/repro-modules/shell-notebook-master to /mnt/sdth-runtime/.shell-notebook
 I MESG Resetting the REPRO target mapping file (/mnt/sdth-runtime/.repro/repro-targets)
 I MESG Installing a default (empty) target mapping file to /mnt/sdth-runtime/.repro/repro-targets
+I MESG Mapping the 'sdth-runtime:demos:run' target to the REPRO 'run-demos' target
+I MESG Mapping the 'sdth-runtime:demos:clean' target to the REPRO 'clean-demos' target
