@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# get the path to the module instllation directory
+install_dir=$(repro.get_module_install_dir sdth-runtime)
+
+# get the path to the jar file
+jar=${install_dir}/sdth-processor.jar
+
+# run the jar and forward the arguments passed to this script
+java -jar ${jar} $@

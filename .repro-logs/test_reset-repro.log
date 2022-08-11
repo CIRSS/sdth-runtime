@@ -6,5 +6,9 @@ I MESG Resetting REPRO
 I MESG Resetting all modules
 I MESG Resetting the 'repro' module
 I MESG Re-initializing trim files for module 'repro'
+I MESG Resetting the 'sdth-runtime' module
+I MESG Re-initializing trim files for module 'sdth-runtime'
+I MESG Resetting the 'java-runtime' module
+I MESG Re-initializing trim files for module 'java-runtime'
 I MESG Resetting the REPRO target mapping file (/mnt/sdth-runtime/.repro/repro-targets)
 I MESG Installing a default (empty) target mapping file to /mnt/sdth-runtime/.repro/repro-targets
