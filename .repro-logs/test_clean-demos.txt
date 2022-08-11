@@ -1,0 +1,24 @@
+
+------- Cleaning example 01-compute-simple/ ----------------
+removed './run.txt'
+removed './tmp/C1.sh'
+removed './tmp/C1.txt'
+rmdir: removing directory, './tmp'
+removed './products/sdth_output.ttl'
+rmdir: removing directory, './products'
+
+------- Cleaning example 02-compute/ ----------------
+removed './run.txt'
+removed './tmp/C1.sh'
+removed './tmp/C1.txt'
+rmdir: removing directory, './tmp'
+removed './products/sdth_output.ttl'
+rmdir: removing directory, './products'
+
+------- Cleaning example 03-temps/ ----------------
+removed './run.txt'
+removed './tmp/C1.sh'
+removed './tmp/C1.txt'
+rmdir: removing directory, './tmp'
+removed './products/sdth_output.ttl'
+rmdir: removing directory, './products'
