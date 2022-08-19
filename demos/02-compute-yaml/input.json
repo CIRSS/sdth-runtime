@@ -1,0 +1,5 @@
+{
+  "sdtlPath" : "compute_sdtl.json",
+  "yamlMetadataPath" : "metadata.yaml",
+  "outputPath" : "products/sdth_output.ttl"
+}

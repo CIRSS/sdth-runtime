@@ -1,0 +1,16 @@
+- dataframe: 
+   name: "temps"
+   variables:
+    - id: "V1"
+      name: "fahrenheit"
+  file: 
+   name: "temps.csv"
+- dataframe: 
+   name: "df"
+   variables:
+    - id: "V2"
+      name: "A"
+    - id: "V3"
+      name: "B"
+  file: 
+   name: "df.csv"
