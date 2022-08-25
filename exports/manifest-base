@@ -1,3 +1,3 @@
 setup-base
 produce-sdth
-sdth-processor.zip https://github.com/CIRSS/sdth-runtime/releases/download/v0.1.0/sdth-processor.zip
+sdth-processor.jar https://gitlab.com/api/v4/projects/38010531/repository/files/dist%2Fsdth-processor.jar/raw?ref=repro sdth-processor.jar

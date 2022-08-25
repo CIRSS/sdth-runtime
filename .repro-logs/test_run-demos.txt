@@ -1,6 +1,8 @@
 
 ---------- Running example 01-compute-simple/ -------------
 
+---------- Running example 02-compute-yaml/ -------------
+
 ---------- Running example 02-compute/ -------------
 
 ---------- Running example 03-temps/ -------------

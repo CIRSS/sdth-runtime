@@ -1,6 +1,1 @@
 repro.require java-runtime master ${REPROS_DEV}
-
-sudo apt install unzip
-unzip sdth-processor.zip
-rm sdth-processor.zip
-
