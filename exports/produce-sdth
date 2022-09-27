@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# load repro functions
+source ${REPRO_BASE_FUNCTIONS}
+
 # get the path to the module instllation directory
 install_dir=$(repro.get_module_install_dir sdth-runtime)
 

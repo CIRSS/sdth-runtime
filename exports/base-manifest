@@ -1,0 +1,3 @@
+base-setup
+produce-sdth
+sdth-processor.jar https://gitlab.com/api/v4/projects/38010531/repository/files/exports%2Fbinaries%2Fsdth-processor.jar/raw?ref=repro sdth-processor.jar
