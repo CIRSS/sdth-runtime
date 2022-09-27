@@ -3,7 +3,7 @@
 produce-sdth ./input.json
 
 --------------------------------------------- OUTPUTS -------------------------------------------------
-Output successfully written to [/mnt/sdth-runtime/demos/01-compute-simple/./products/sdth_output.ttl].
+Output successfully written to [/mnt/sdth-runtime/demo/03-temps/./products/sdth_output.ttl].
 -------------------------------------------------------------------------------------------------------
 
 

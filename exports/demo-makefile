@@ -1,5 +1,5 @@
 run:
-	make -C ${REPRO_MNT}/demos run
+	make -C ${REPRO_MNT}/demo run
 
 clean:
-	make -C ${REPRO_MNT}/demos clean
+	make -C ${REPRO_MNT}/demo clean
